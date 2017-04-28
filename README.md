@@ -9,23 +9,12 @@ This image is updated via pull requests to the `phalconphp/dockerfiles` [GitHub 
 You can run the default `phalcon` command simply:
 
 ```
-$ docker run -it --rm phalconphp/devtools:7 help
+$ docker run -it --rm gsviec/phalcontool help
 ```
 
-And you can create alias in order to implement convenient runner. Create file called `/usr/local/bin/devtools` as follows:
+And you can create alias in order to implement convenient runner. 
 
-```sh
-#!/usr/bin/env bash
-
-mkdir -p ${HOME}/.ssh
-mkdir -p ${HOME}/.composer
-
-docker run -it --rm \
-    -v $(pwd):/app \
-    gsviec/phalcontool
-```
-
-Make it executable:
+Make it alias:
 
 ```
 ##Add a alias to bash 
