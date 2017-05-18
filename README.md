@@ -20,8 +20,11 @@ Make it alias:
 ##Add a alias to bash 
 alias phalcon='docker run -ti --rm  -v $(pwd):/app gsviec/phalcontool'
 ```
+To this image see a connect database via network with name container mysql_phalcon
 
-Test:
+```
+alias phalcon='docker run -ti --rm --link mysql_phalcon:mysql --net phalconcanban_default -v $(pwd):/app gsviec/phalcontool'
+```
 
 ```
 $ phalcon
